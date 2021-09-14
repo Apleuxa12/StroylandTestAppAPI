@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StroylandTestAppAPI</string>
+    <string name="fetchQueryButtonText">Поиск</string>
+</resources>
