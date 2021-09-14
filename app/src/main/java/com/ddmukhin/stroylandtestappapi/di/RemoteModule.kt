@@ -54,9 +54,9 @@ class RemoteModule {
     @Provides
     @Singleton
     fun provideConverter(): GiphyConverter = object : GiphyConverter {
-        override fun fromRemoteToUi(response: Response<GiphyResponse>): List<Giphy> {
+        override fun fromRemoteToUi(response: Response<GiphyResponse>): List<Giphy>? {
             if (!response.isSuccessful || response.body() == null)
-                return listOf()
+                return null
             return response.body()!!.data.filter {
                 it.images.fixed_height.mp4 != null
             }.map {

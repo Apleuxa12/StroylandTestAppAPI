@@ -6,6 +6,6 @@ import retrofit2.Response
 
 interface GiphyConverter {
 
-    fun fromRemoteToUi(response: Response<GiphyResponse>) : List<Giphy>
+    fun fromRemoteToUi(response: Response<GiphyResponse>) : List<Giphy>?
 
 }
